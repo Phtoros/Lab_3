@@ -29,7 +29,7 @@ SUITE(TestKey) // тесты для ключа
     }
 }
 
-struct KeyAB_fixture { // Для тестов шифрования и расшифрования
+struct KeyAB_fixture { // Ключ для тестов
     modAlphaCipher * pointer;
     KeyAB_fixture()
     {
@@ -72,7 +72,7 @@ SUITE(TestEncrypt) // Шифрование
     }
 
 }
-SUITE(DecryptTest) // расшифрование
+SUITE(DecryptTest) // Расшифрование
 {
     TEST_FIXTURE(KeyAB_fixture, Letters_Uppercase) {
         wstring cipher_text = L"АГВЕДЖЁИЗКЙМЛОНРПТСФУЦХШЧЪЩЬЫЮЭАЯ";
